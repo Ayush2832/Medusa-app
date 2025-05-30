@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:349769753356:task-definition/medusa-task:6",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:349769753356:task-definition/medusa-task:8",
     "containerDefinitions": [
         {
             "name": "medusa",
@@ -22,7 +22,7 @@
     "family": "medusa-task",
     "executionRoleArn": "arn:aws:iam::349769753356:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 6,
+    "revision": 8,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -49,7 +49,7 @@
     ],
     "cpu": "512",
     "memory": "1024",
-    "registeredAt": "2025-05-30T06:37:39.534Z",
+    "registeredAt": "2025-05-30T09:05:20.440Z",
     "registeredBy": "arn:aws:iam::349769753356:user/ec2-user",
     "tags": []
 }
