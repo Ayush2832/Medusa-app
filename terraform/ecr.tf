@@ -15,11 +15,11 @@ resource "null_resource" "docker_build_and_push" {
     command = <<EOT
       aws ecr get-login-password --region ${var.aws_region} | docker login --username AWS --password-stdin ${var.aws_account_id}.dkr.ecr.${var.aws_region}.amazonaws.com
 
-      docker build -t ${var.image_name} .
+      docker build -t ${var.image_name} ..
 
-      docker tag ${var.image_name}:latest ${var.aws_account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${var.image_name}:v1
+      docker tag ${var.image_name}:latest ${var.aws_account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${var.ecr_repo_name}:v1
 
-      docker push ${var.aws_account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${var.image_name}
+      docker push ${var.aws_account_id}.dkr.ecr.${var.aws_region}.amazonaws.com/${var.ecr_repo_name}:v1
     EOT
   }
 
