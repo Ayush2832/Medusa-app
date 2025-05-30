@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:349769753356:task-definition/medusa-task:8",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:349769753356:task-definition/medusa-task:11",
     "containerDefinitions": [
         {
             "name": "medusa",
-            "image": "349769753356.dkr.ecr.us-east-2.amazonaws.com/medusa-app22:v1",
+            "image": "349769753356.dkr.ecr.us-east-2.amazonaws.com/medusa-app:v1",
             "cpu": 0,
             "portMappings": [
                 {
@@ -22,7 +22,7 @@
     "family": "medusa-task",
     "executionRoleArn": "arn:aws:iam::349769753356:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 8,
+    "revision": 11,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -49,7 +49,7 @@
     ],
     "cpu": "512",
     "memory": "1024",
-    "registeredAt": "2025-05-30T09:05:20.440Z",
+    "registeredAt": "2025-05-30T10:30:35.749Z",
     "registeredBy": "arn:aws:iam::349769753356:user/ec2-user",
     "tags": []
 }
