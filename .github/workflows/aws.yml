@@ -32,12 +32,12 @@ on:
 
 env:
   AWS_REGION: us-east-2                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: medusa-app              # set this to your Amazon ECR repository name
-  ECS_SERVICE: service1-medusa                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: cluster1                        # set this to your Amazon ECS cluster name
+  ECR_REPOSITORY: medusa-app22              # set this to your Amazon ECR repository name
+  ECS_SERVICE: medusa-service                 # set this to your Amazon ECS service name
+  ECS_CLUSTER: medusa-cluster                        # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: medusa-task.json             # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: medusa-app           # set this to the name of the container in the
+  CONTAINER_NAME: medusa           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 
 permissions:

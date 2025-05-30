@@ -1,61 +1,33 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:349769753356:task-definition/medusa-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:349769753356:task-definition/medusa-task:6",
     "containerDefinitions": [
         {
-            "name": "medusa-app",
-            "image": "349769753356.dkr.ecr.us-east-2.amazonaws.com/medusa-app:v1",
+            "name": "medusa",
+            "image": "349769753356.dkr.ecr.us-east-2.amazonaws.com/medusa-app22:v1",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "9000",
                     "containerPort": 9000,
                     "hostPort": 9000,
-                    "protocol": "tcp",
-                    "appProtocol": "http"
+                    "protocol": "tcp"
                 }
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
-            "logConfiguration": {
-                "logDriver": "awslogs",
-                "options": {
-                    "awslogs-group": "/ecs/medusa-task",
-                    "mode": "non-blocking",
-                    "awslogs-create-group": "true",
-                    "max-buffer-size": "25m",
-                    "awslogs-region": "us-east-2",
-                    "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
-            },
             "systemControls": []
         }
     ],
     "family": "medusa-task",
     "executionRoleArn": "arn:aws:iam::349769753356:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 6,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
         {
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-        },
-        {
-            "name": "ecs.capability.execution-role-awslogs"
-        },
-        {
             "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -65,9 +37,6 @@
         },
         {
             "name": "ecs.capability.task-eni"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
         }
     ],
     "placementConstraints": [],
@@ -78,13 +47,9 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "1024",
-    "memory": "3072",
-    "runtimePlatform": {
-        "cpuArchitecture": "X86_64",
-        "operatingSystemFamily": "LINUX"
-    },
-    "registeredAt": "2025-05-29T13:07:03.097Z",
-    "registeredBy": "arn:aws:iam::349769753356:root",
+    "cpu": "512",
+    "memory": "1024",
+    "registeredAt": "2025-05-30T06:37:39.534Z",
+    "registeredBy": "arn:aws:iam::349769753356:user/ec2-user",
     "tags": []
 }
